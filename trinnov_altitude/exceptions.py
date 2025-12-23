@@ -25,9 +25,7 @@ class InvalidMacAddressOUIError(Exception):
 
     def __init__(self, mac_oui, valid_ouis):
         valid_ouis_str = ", ".join(valid_ouis)
-        self.message = (
-            f"Invalid MAC address OUI {mac_oui}, must be one of {valid_ouis_str}"
-        )
+        self.message = f"Invalid MAC address OUI {mac_oui}, must be one of {valid_ouis_str}"
         super().__init__(self.message)
 
 
@@ -44,7 +42,7 @@ class NoMacAddressError(Exception):
 
     def __init__(
         self,
-        message="You must supply a mac address up instantiation to power on the Trinnov Altitude.?",
+        message="You must supply a mac address upon instantiation to power on the Trinnov Altitude.",
     ):
         self.message = message
         super().__init__(self.message)
